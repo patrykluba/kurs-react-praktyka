@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { QueryClientProvider, QueryClient } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 
-
 import Loading from './components/Loading';
 
 import { HOME_PAGE } from './constants/urls';
@@ -14,6 +13,8 @@ import store from './store/store';
 import configureAxios from './utils/configureAxios';
 
 import reportWebVitals from './reportWebVitals';
+
+import './index.css';
 
 const HomePage = React.lazy(() => import('./views/HomePage'))
 

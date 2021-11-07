@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
+import Layout from '../../components/Layout';
 
 import { setLoggedUser } from '../../store/actions/authActions';
 
@@ -11,9 +12,11 @@ const HomePage = () => {
     }, [])
     
     return (
-        <div>
-            Strona główna
-        </div>
+        <Layout>
+            <div>
+                Strona główna
+            </div>
+        </Layout>
     )
 }
 
