@@ -1,14 +1,13 @@
 import React from 'react'
 import Layout from '../../components/Layout';
+import LoginForm from '../../forms/LoginForm';
 
-const HomePage = () => {    
+const LoginPage = () => {    
     return (
         <Layout>
-            <div>
-                Strona główna
-            </div>
+            <LoginForm />
         </Layout>
     )
 }
 
-export default HomePage
+export default LoginPage

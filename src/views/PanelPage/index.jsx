@@ -1,14 +1,15 @@
 import React from 'react'
 import Layout from '../../components/Layout';
+import withLogin from '../../HOCs/withLogin';
 
-const HomePage = () => {    
+const PanelPage = () => {    
     return (
         <Layout>
             <div>
-                Strona główna
+                Strona panelu
             </div>
         </Layout>
     )
 }
 
-export default HomePage
+export default withLogin(PanelPage);

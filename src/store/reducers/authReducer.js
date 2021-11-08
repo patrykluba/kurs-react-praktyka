@@ -1,7 +1,8 @@
-import { ACTION_SET_LOGGED_USER } from "../../constants/reduxKeys";
+import { ACTION_SET_LOGGED_USER, ACTION_SET_USER_DATA } from "../../constants/reduxKeys";
 
 const state = {
   isLoggedUser: false,
+  userData: null
 };
 
 export const authReducer = (initialState = state, { type, payload }) => {
@@ -10,6 +11,11 @@ export const authReducer = (initialState = state, { type, payload }) => {
       return {
         ...initialState,
         isLoggedUser: payload
+      }
+    case ACTION_SET_USER_DATA: 
+      return {
+        ...initialState,
+        userData: payload
       }
     default:
       return initialState;
