@@ -45,6 +45,8 @@ const LoginForm = () => {
                 localStorage.setItem(JWT_ACCESS_TOKEN, result.data.access);
                 localStorage.setItem(JWT_REFRESH_TOKEN, result.data.access);
 
+                axios.defaults.headers['Authorization'] = `JWT ${result.data.access}`;
+
                 dispatch(setLoggedUser(true));
 
                 const { data } = await query.refetch();
